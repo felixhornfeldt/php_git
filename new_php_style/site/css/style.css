@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.grid {
+    display: grid;
+}
+
+.base {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 80vh;
+}
+
+.header {
+    background-color: ;
+    align-content: center;
+    color: #fff;
+}
