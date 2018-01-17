@@ -1,0 +1,67 @@
+/* STANDARD CSS PROPERTIES */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat','Open sans', Arial, Helvetica, sans-serif;
+}
+
+a {
+    background-color: transparent;
+    transition: all .5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+}
+
+._1span {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid {
+    display: grid;
+}
+
+.hide {
+    display: none;
+}
+
+/* CONTAINER CSS BASE GRID PROPERTIES */
+
+.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 90vh;
+}
+
+/* HEADER CSS BASE GRID PROPERTIES */
+
+.header {
+    background-color: #ffd700;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.headerContent {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: inherit;
+}
+
+.headerMiddleContent {
+    grid-column: 2 / 4;
+    grid-row: span 1;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: inherit;
+}
+
+.headerMiddleLeftContent {
+    align-content: center;
+    color: #fff;
+    font-size: 24px;
+    /*font-weight: 700;*/
+    letter-spacing: -3px;
+}
+
+.headerMiddleRightContent {
+    align-content: center;
+}
+
+/* MAIN CSS BASE GRID PROPERTIES */
