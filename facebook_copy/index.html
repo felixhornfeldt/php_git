@@ -16,10 +16,10 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0" >
             
             <!--Title of page-->
-            <title>famebook</title>
+            <title>Famebook</title>
             
             <!--Icon Head-->
-            <link rel="icon" href="" sizes="32x32" />
+            <link rel="icon" href="fb-art.png" sizes="32x32" />
             
             <!-- Icon library FB TW IG etc. -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -33,11 +33,23 @@
             		<div class="headerContent grid _1span">
             			<div class="headerMiddleContent grid">
             				<div class="headerMiddleLeftContent grid _1span">
-            					<h1 style="margin: 0;">famebook</h1>
+            					<h1>famebook</h1>
             				</div>
             				<div class="headerMiddleRightContent grid _1span">
-            					<form action="" method="post" class="form_login">
-            						
+            					<form action="database/login.php" method="post" class="form_login grid _1span">
+            						<div class="formContent grid _1span">
+            						    <div class="formUidLogin grid _1span">
+                                            <label for="uid" class="loginLabel grid">Username</label>
+            						        <input type="text" class="loginInput">
+            						    </div>
+            						    <div class="formPwdLogin grid _1span">
+                                            <label for="pwd" class="loginLabel grid">Password</label>
+            						        <input type="password" id="pwd" class="loginInput">
+            						    </div>
+            						    <div class="formSubmitLogin grid _1span">
+            						        <button type="submit" name="submitLogin" class="submitLoginButton">Login</button>
+            						    </div>
+            						</div>
             					</form>
             				</div>
             			</div>
@@ -45,7 +57,14 @@
             	</div>
             	<div class="main grid _1span" role="main">
             		<div class="mainContent grid _1span">
-            			
+            			<div class="mainMiddleContent grid">
+            			    <div class="mainMiddleLeftContent grid _1span">
+            			        
+            			    </div>
+            			    <div class="mainMiddleRightContent grid _1span">
+            			        
+            			    </div>
+            			</div>
             		</div>
             	</div>
             </div>

@@ -35,7 +35,7 @@ a {
 /* HEADER CSS BASE GRID PROPERTIES */
 
 .header {
-    background-color: #ffd700;
+    background: linear-gradient( #ff0f0f, #df0000 50%);
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
@@ -52,16 +52,101 @@ a {
     grid-template-rows: inherit;
 }
 
+/* HEADER LEFT MIDDLE CSS PROPERTIES */
+
 .headerMiddleLeftContent {
     align-content: center;
     color: #fff;
     font-size: 24px;
-    /*font-weight: 700;*/
-    letter-spacing: -3px;
+    letter-spacing: -2px;
 }
 
+.headerMiddleLeftContent h1 {
+    margin: 0;
+}
+
+/* HEADER RIGHT MIDDLE CSS PROPERTIES */
+
 .headerMiddleRightContent {
-    align-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: inherit;
+}
+
+/* LOGIN FORM CSS PROPERTIES */
+
+.form_login {
+    grid-template-columns: inherit;
+    grid-template-rows: inherit;
+}
+
+.formContent {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: inherit;
+}
+
+.formSubmitLogin,
+.formPwdLogin,
+.formUidLogin {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    color: #fff;
+}
+
+.loginInput{
+    margin-right: 1vw;
+    border: 1px solid #df0000;
+    grid-column: span 1;
+    grid-row: 3 / 4;
+}
+
+.loginLabel {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    grid-column: span 1;
+    grid-row: 2 / 3;
+}
+
+.submitLoginButton {
+    grid-column: span 1;
+    grid-row: 3 / 4;
+    color: #fff;
+    font-family: 'Montserrat','Open sans', Arial, Helvetica, sans-serif;
+    border: 1px solid #ff0f0f;
+    background-color: #df0000;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.submitLoginButton:hover {
+    background-color: #ff0f0f;
 }
 
 /* MAIN CSS BASE GRID PROPERTIES */
+
+.main {
+    background-color: #f1f1f1;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.mainContent {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: inherit;
+}
+
+.mainMiddleContent {
+    grid-column: 2 / 4;
+    grid-row: span 1;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: inherit;
+}
+
+/* MAIN RIGHT MIDDLE CSS PROPERTIES */
+
+.mainMiddleRightContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: inherit;
+}
