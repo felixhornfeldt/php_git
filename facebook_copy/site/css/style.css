@@ -29,7 +29,7 @@ a {
 
 .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 10vh 90vh;
+    grid-template-rows: 10vh 80vh 10vh;
 }
 
 /* HEADER CSS BASE GRID PROPERTIES */
@@ -144,9 +144,64 @@ a {
     grid-template-rows: inherit;
 }
 
+/* MAIN LEFT MIDLLE CSS PROPERTIES */
+
 /* MAIN RIGHT MIDDLE CSS PROPERTIES */
 
 .mainMiddleRightContent {
     grid-template-columns: 1fr;
     grid-template-rows: inherit;
 }
+
+.mainMiddleRightGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.mainSignUpFormHeadline {
+    grid-column: span 2;
+    grid-row: 2 / 3;
+    align-content: center;
+}
+
+.signUpFormH1 {
+    margin: 0;
+    color: #000;
+}
+
+/* SIGN UP FORM CSS PROPERTIES */
+
+.form_signup {
+    grid-column: span 2;
+    grid-row: 4 / 10;
+    grid-template-columns: inherit;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 5px;
+    grid-column-gap: 10px;
+}
+
+.signUpFirstName,
+.signUpLastName {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.signUpEmail,
+.signUpUsername,
+.signUpPassword {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.signUpSubmit {
+    grid-column: span 2;
+    grid-row: 6 / 7;
+}
+
+.inputSignUpText {
+    border-radius: 5px;
+    border: 1px solid #000;
+    font-size: auto;
+}
+
+/* FOOTER CSS BASE GRID PROPERTIES */
