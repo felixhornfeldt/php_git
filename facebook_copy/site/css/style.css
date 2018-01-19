@@ -146,6 +146,44 @@ a {
 
 /* MAIN LEFT MIDLLE CSS PROPERTIES */
 
+.mainMiddleLeftContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: inherit;
+}
+
+.mainMiddleLeftGrid {
+    grid-template-columns: inherit;
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.mainMiddlePlac {
+    grid-column: span 1;
+    grid-row: 2 / 10;
+    grid-template-columns: inherit;
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.mainPlacHeadline2 {
+    align-content: center;
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.mainPlacH2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+img {
+    grid-row: span 3;
+    grid-column: span 1;
+    margin: 0;
+    max-width: 25vw;
+    height: auto;
+}
+
 /* MAIN RIGHT MIDDLE CSS PROPERTIES */
 
 .mainMiddleRightContent {
@@ -160,11 +198,16 @@ a {
 
 .mainSignUpFormHeadline {
     grid-column: span 2;
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
     align-content: center;
 }
 
 .signUpFormH1 {
+    margin: 0;
+    color: #000;
+}
+
+.signUpFormP {
     margin: 0;
     color: #000;
 }
@@ -188,14 +231,11 @@ a {
 
 .signUpEmail,
 .signUpUsername,
-.signUpPassword {
-    grid-column: span 2;
-    grid-row: span 1;
-}
-
+.signUpPassword,
+.signUpGender,
 .signUpSubmit {
     grid-column: span 2;
-    grid-row: 6 / 7;
+    grid-row: span 1;
 }
 
 .inputSignUpText {
@@ -203,6 +243,31 @@ a {
     border: 1px solid #000;
     font-size: 18px;
     padding: 8px 10px;
+}
+
+.signUpGender {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.gender {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: inherit;
+    vertical-align: middle;
+}
+
+.inputGender {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.labelGender {
+    grid-column: span 5;
+    grid-row: span 1;
+    font-size: 18px;
+    font-weight: normal;
+    align-content: center;
+    padding: 0 10px 0 3px;
 }
 
 .signUpSubmit {
@@ -215,8 +280,9 @@ a {
     border: 0;
     color: #fff;
     padding: 10px;
-    font-size: 18px;
+    font-size: 26px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .submitSignUpButton:hover {
@@ -227,4 +293,24 @@ a {
 
 .footer {
     background: linear-gradient( #ff0f0f, #df0000 50%);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.footerContent {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: inherit;
+}
+
+.footerInfo {
+    grid-column: 2 / 3;
+    grid-row: span 1;
+    align-content: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footerCopyright {
+    margin: 0;
 }

@@ -3,6 +3,6 @@
 $dbServername = 'localhost';
 $dbUsername = 'root';
 $dbPassword = '';
-$dbName = '';
+$dbName = 'famebook';
 
 $conndb = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);

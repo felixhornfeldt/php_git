@@ -40,11 +40,11 @@
             						<div class="formContent grid _1span">
             						    <div class="formUidLogin grid _1span">
                                             <label for="uid" class="loginLabel grid">Username</label>
-            						        <input type="text" class="loginInput">
+            						        <input type="text" id="uid" class="loginInput" name="uid">
             						    </div>
             						    <div class="formPwdLogin grid _1span">
                                             <label for="pwd" class="loginLabel grid">Password</label>
-            						        <input type="password" id="pwd" class="loginInput">
+            						        <input type="password" id="pwd" class="loginInput" name="pwd">
             						    </div>
             						    <div class="formSubmitLogin grid _1span">
             						        <button type="submit" name="submitLogin" class="submitLoginButton">Login</button>
@@ -59,28 +59,50 @@
             		<div class="mainContent grid _1span">
             			<div class="mainMiddleContent grid">
             			    <div class="mainMiddleLeftContent grid _1span">
-            			        
+            			        <div class="mainMiddleLeftGrid grid _1span">
+            			        	<div class="mainMiddlePlac grid">
+            			        		<div class="mainPlacHeadline2 grid">
+            			        			<h2 class="mainPlachH2">Just sign up and live the adventure!</h2>
+            			        		</div>
+            			        		<img src="site/img/world_people_image_red.png" alt="">
+            			        	</div>
+            			        </div>
             			    </div>
             			    <div class="mainMiddleRightContent grid _1span">
             			        <div class="mainMiddleRightGrid grid _1span">
             			            <div class="mainSignUpFormHeadline grid">
             			                <h1 class="signUpFormH1">Sign Up</h1>
+            			                <p class="signUpFormP">and experience your biggest dream.</p>
             			            </div>
-            			            <form action="" method="post" class="form_signup grid">
+            			            <form action="database/signup.php" method="post" class="form_signup grid">
             			                <div class="signUpFirstName grid">
-            			                    <input type="text" class="inputSignUpText" placeholder="Firstname">
+            			                    <input type="text" class="inputSignUpText" placeholder="Firstname" name="firstname">
             			                </div>
             			                <div class="signUpLastName grid">
-            			                    <input type="text" class="inputSignUpText" placeholder="Lastname">
+            			                    <input type="text" class="inputSignUpText" placeholder="Lastname" name="lastname">
             			                </div>
             			                <div class="signUpEmail grid">
-            			                    <input type="email" class="inputSignUpText" placeholder="Email">
+            			                    <input type="email" class="inputSignUpText" placeholder="Email" name="email">
             			                </div>
             			                <div class="signUpUsername grid">
-            			                    <input type="text" class="inputSignUpText" placeholder="Username">
+            			                    <input type="text" class="inputSignUpText" placeholder="Username" name="uid">
             			                </div>
             			                <div class="signUpPassword grid">
-            			                    <input type="password" class="inputSignUpText" placeholder="Password">
+            			                    <input type="password" class="inputSignUpText" placeholder="Password" name="pwd">
+            			                </div>
+            			                <div class="signUpGender grid">
+            			                	<div class="gender grid _1span" id="genderMale">
+            			                		<input type="radio" id="male" value="male" name="gender" class="inputGender">
+            			                		<label for="male" class="labelGender grid">Male</label>
+            			                	</div>
+            			                	<div class="gender grid _1span" id="genderFemale">
+            			                		<input type="radio" value="female" id="female" name="gender" class="inputGender">
+            			                		<label for="female" class="labelGender grid">Female</label>
+            			                	</div>
+            			                	<div class="gender grid _1span" id="genderOther">
+            			                		<input type="radio" value="other" id="other" name="gender" class="inputGender">
+            			                		<label for="other" class="labelGender grid">Other</label>
+            			                	</div>
             			                </div>
             			                <div class="signUpSubmit grid">
             			                    <button class="submitSignUpButton">Create Account</button>
@@ -92,7 +114,11 @@
             		</div>
             	</div>
             	<div class="footer grid _1span" role="footer">
-            	    
+            	    <div class="footerContent grid _1span">
+            	    	<div class="footerInfo grid">
+            	    		<p class="footerCopyright">© 2018 Felix Hörnfeldt</p>
+            	    	</div>
+            	    </div>
             	</div>
             </div>
 		</body>
