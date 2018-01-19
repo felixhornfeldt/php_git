@@ -176,7 +176,7 @@ a {
     grid-row: 4 / 10;
     grid-template-columns: inherit;
     grid-template-rows: repeat(6, 1fr);
-    grid-row-gap: 5px;
+    grid-row-gap: 10px;
     grid-column-gap: 10px;
 }
 
@@ -201,7 +201,30 @@ a {
 .inputSignUpText {
     border-radius: 5px;
     border: 1px solid #000;
-    font-size: auto;
+    font-size: 18px;
+    padding: 8px 10px;
+}
+
+.signUpSubmit {
+    align-content: center;
+    justify-content: center;
+}
+
+.submitSignUpButton {
+    background-color: #df0000;
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submitSignUpButton:hover {
+    background-color: #ff0f0f;
 }
 
 /* FOOTER CSS BASE GRID PROPERTIES */
+
+.footer {
+    background: linear-gradient( #ff0f0f, #df0000 50%);
+}
