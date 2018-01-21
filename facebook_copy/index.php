@@ -89,10 +89,13 @@
             			                </div>
             			                <div class="signUpPassword grid">
             			                    <input type="password" class="inputSignUpText" placeholder="Password" name="pwd">
-            			                </div>
+										</div>
+										<div class="signUpConConfirmPassword grid">
+											<input type="password" class="inputSignUpText" placeholder="Confirm Password" name="conpwd">
+										</div>
             			                <div class="signUpGender grid">
             			                	<div class="gender grid _1span" id="genderMale">
-            			                		<input type="radio" id="male" value="male" name="gender" class="inputGender">
+            			                		<input type="radio" id="male" value="male" name="gender" class="inputGender" checked>
             			                		<label for="male" class="labelGender grid">Male</label>
             			                	</div>
             			                	<div class="gender grid _1span" id="genderFemale">
@@ -105,7 +108,7 @@
             			                	</div>
             			                </div>
             			                <div class="signUpSubmit grid">
-            			                    <button class="submitSignUpButton">Create Account</button>
+            			                    <button class="submitSignUpButton" name="submitSignUp" type="submit">Create Account</button>
             			                </div>
             			            </form>
             			        </div>
