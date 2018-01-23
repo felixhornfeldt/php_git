@@ -8,27 +8,27 @@ if (isset($_POST['submitSignUp'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $username = mysqli_real_escape_string($conn, $_POST['uid']);
     $password = mysqli_real_escape_string($conn, $_POST['pwd']);
-    $conpassword = mysqli_real_escape_string($conn, $_POST['conpwd']);
+    $conpwd = mysqli_real_escape_string($conn, $_POST['conpwd']);
 
     // Error handlers
     // Check empty fields
-    if (empty($firstname) || empty($lastname) || empty($email) || empty($username) || empty($password) || empty($conpassword)) {
-        header("Location: ../index.php?signup=empty");
+    if (empty($firstname) || empty($lastname) || empty($email) || empty($username) || empty($password) || empty($conpwd)) {
+        header("Location: ../?signup=empty");
         exit();
     } else {
         // Check if input is valid
-        if (!preg_match("/^[a-öA-Ö]^$/", $firstname) || !preg_match("/^[a-öA-Ö]^$/", $lastname)) {
-            header("Location: ../index.php?signup=invalid");
+        if (!preg_match("/^[a-zA-Z]*$/", $firstname) || !preg_match("/^[a-zA-Z]*$/", $lastname)) {
+            header("Location: ../?signup=invalid");
             exit();
         } else {
             // Check if username is lower case
-            if (!preg_match("/^[a-z]^$/", $username)) {
-                header("Location: ../index.php?signup=usernameinvalid");
+            if (!preg_match("/^[a-z]*$/", $username)) {
+                header("Location: ../?signup=usernameinvalid=notlowercase");
                 exit();
             } else {
                 // Check if email is valid
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    header("Location: ../index.php?signup=invalidemail");
+                    header("Location: ../?signup=invalidemail");
                     exit();
                 } else {
                     //Check username
@@ -37,21 +37,21 @@ if (isset($_POST['submitSignUp'])) {
                     $resultCheck = mysqli_num_rows($result);
 
                     if ($resultCheck > 0) {
-                        header("Location: ../index.php?signup=usernameunavailable");
+                        header("Location: ../?signup=usernameunavailable");
                         exit();
                     } else {
-                        // Check password and hash the password
-                        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                        if ($password != $conpassword) {
-                            header("Location: ../index.php?signup=passwordnomatch");
+                        // Check password
+                        if ($password != $conpwd) {
+                            header("Location: ../?signup=passwordnomatch");
                             exit();
                         } else {
+                            // Hashing the password
+                            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                             //Insert the user into the database
 					        $sql = "INSERT INTO users (user_firstname, user_lastname, user_email, user_username, user_password) VALUES ('$firstname', '$lastname', '$email', '$username', '$hashedPwd');";
 					        mysqli_query($conn, $sql);
-					
 					        //Sucess
-                            header("Location: ../index.php?signup=sucess");
+                            header("Location: ../?signup=sucess");
                             exit();
                         }
                     }
@@ -60,6 +60,6 @@ if (isset($_POST['submitSignUp'])) {
         }
     }
 } else {
-    header("Location: ../index.php?signup=empty");
+    header("Location: ../?signup=false");
     exit();
 }

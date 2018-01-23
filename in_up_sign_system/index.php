@@ -24,7 +24,7 @@ session_start();
 					</form>';
 					echo '<h1>Sign Up</h1>
 					<form action="database_php/signup.php" method="post">
-					<input type="text" name="first" placeholder="Firstname">
+					<input type="text" name="firstname" placeholder="Firstname">
 					<input type="text" name="last" placeholder="Lastname">
 					<input type="email" name="email" placeholder="Email">
 					<input type="text" name="uid" placeholder="Username">
