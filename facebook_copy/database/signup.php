@@ -17,7 +17,7 @@ if (isset($_POST['submitSignUp'])) {
         exit();
     } else {
         // Check if input is valid
-        if (!preg_match("/^[a-zA-Z]*$/", $firstname) || !preg_match("/^[a-zA-Z]*$/", $lastname)) {
+        if (!preg_match("/^[a-öA-Ö]*$/", $firstname) || !preg_match("/^[a-öA-Ö]*$/", $lastname)) {
             header("Location: ../?signup=invalid");
             exit();
         } else {
@@ -48,7 +48,7 @@ if (isset($_POST['submitSignUp'])) {
                             // Hashing the password
                             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                             //Insert the user into the database
-					        $sql = "INSERT INTO users (user_firstname, user_lastname, user_email, user_username, user_password) VALUES ('$firstname', '$lastname', '$email', '$username', '$hashedPwd');";
+					        $sql = "INSERT INTO users (user_firstname, user_lastname, user_email, user_username, user_password) VALUES ('$firstname', '$lastname', '$email', '$username', '$hashedPassword');";
 					        mysqli_query($conn, $sql);
 					        //Sucess
                             header("Location: ../?signup=sucess");

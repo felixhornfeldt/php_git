@@ -92,11 +92,12 @@ a {
     color: #fff;
 }
 
-.loginInput{
+.loginInput {
     margin-right: 1vw;
     border: 1px solid #df0000;
     grid-column: span 1;
     grid-row: 3 / 4;
+    padding: 2px;
 }
 
 .loginLabel {
