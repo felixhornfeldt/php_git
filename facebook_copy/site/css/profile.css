@@ -1,0 +1,156 @@
+/* STANDARD CSS PROPERTIES */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat','Open sans', Arial, Helvetica, sans-serif;
+}
+
+a {
+    background-color: transparent;
+    transition: all .5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+}
+
+._1span {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid {
+    display: grid;
+}
+
+.hide {
+    display: none;
+}
+
+/* CONTAINER CSS BASE GRID PROPERTIES */
+
+.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+}
+
+/* HEADER CSS BASE GRID PROPERTIES */
+
+.header {
+    background: linear-gradient( #ff0f0f, #df0000 50%);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.headerContent {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: inherit;
+}
+
+.headerMiddleContent {
+    grid-column: 2 / 4;
+    grid-row: span 1;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: inherit;
+}
+
+/* HEADER LEFT MIDDLE CSS PROPERTIES */
+
+.headerMiddleLeftContent {
+    align-content: center;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: -2px;
+}
+
+.headerMiddleLeftContent h1 {
+    margin: 0;
+}
+
+/* HEADER RIGHT MIDDLE CSS PROPERTIES */
+
+.headerMiddleRightContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: inherit;
+}
+
+/* LOGIN FORM CSS PROPERTIES */
+
+.form_logout {
+    grid-template-columns: inherit;
+    grid-template-rows: inherit;
+}
+
+.formContent {
+    grid-template-columns: inherit;
+    grid-template-rows: inherit;
+}
+
+.formSubmitLogOut {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    color: #fff;
+    align-content: center;
+    justify-content: center;
+}
+
+.submitLogOutButton {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    color: #df0000;
+    font-size: 24px;
+    font-family: 'Montserrat', 'Open sans', Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    cursor: pointer;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.submitLogOutButton:hover {
+    background-color: #000;
+}
+
+/* MAIN CSS BASE GRID PROPERTIES */
+
+.main {
+    background-color: #f1f1f1;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.mainContent {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: inherit;
+}
+
+.mainMiddleContent {
+    grid-column: 2 / 4;
+    grid-row: span 1;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: inherit;
+}
+
+/* FOOTER CSS BASE GRID PROPERTIES */
+
+.footer {
+    background: linear-gradient( #ff0f0f, #df0000 50%);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.footerContent {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: inherit;
+}
+
+.footerInfo {
+    grid-column: 2 / 3;
+    grid-row: span 1;
+    align-content: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footerCopyright {
+    margin: 0;
+}

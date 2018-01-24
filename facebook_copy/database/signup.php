@@ -51,7 +51,7 @@ if (isset($_POST['submitSignUp'])) {
 					        $sql = "INSERT INTO users (user_firstname, user_lastname, user_email, user_username, user_password) VALUES ('$firstname', '$lastname', '$email', '$username', '$hashedPassword');";
 					        mysqli_query($conn, $sql);
 					        //Sucess
-                            header("Location: ../?signup=sucess");
+                            header("Location: ../profile.html");
                             exit();
                         }
                     }
