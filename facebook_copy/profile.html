@@ -26,6 +26,10 @@
              
             <!-- JS Code -->
             <script src="site/js/main.js"></script>
+
+            <!-- TINYMCE
+            <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+            <script>tinymce.init({ selector:'textarea' });</script> -->
         </head>
         <body>
             <div class="container grid">
@@ -49,7 +53,29 @@
                 </div>
                 <div class="main grid _1span">
                     <div class="mainContent grid _1span">
-                        <div class="mainMiddleContent grid"></div>
+                        <div class="mainMiddleContent grid">
+                            <div class="mainMiddleContentLeft grid">
+                                <div class="mainProfileImageContent grid">
+                                    <div class="profileImageBox grid">
+                                        <img src="" alt="" class="profileImage">
+                                    </div>
+                                </div>
+                                <div class="mainProfileInformationContent grid">
+
+                                </div>
+                            </div>
+                            <div class="mainMiddleContentRight grid"></div>
+                        </div>
+                        <div class="mainBlogControlPanelContent grid">
+                            <div class="mainBlogControlPanelBox grid">
+                                <form action="" method="POST" class="mainBlogControlPanelForm grid">
+                                    <h1 class="blogFormHeadline">New Blogpost</h1>
+                                    <input type="text" class="blogHeadlineInput" placeholder="Blog Headline ....">
+                                    <textarea name="" class="blogFormTextarea" placeholder="Blog content ...."></textarea>
+                                    <button class="blogFormSubmitButton" type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="footer grid _1span" role="footer">
