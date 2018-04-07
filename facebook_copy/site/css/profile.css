@@ -160,6 +160,11 @@ a {
     background-color: #fff;
 }
 
+.profileImageUploadForm {
+    grid-column: 2 / 10;
+    grid-row: 11 / 12;
+}
+
 .mainProfileInformationContent {
     grid-column: 1 / 2;
     grid-row: 5 / 7;
